@@ -17,21 +17,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
   </head>
   <body>
+    <div class="row" style="position: fixed; bottom:25px; left:15%; right: 15%;">
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Message" id="message">
+        </div>
+        <div class="col-sm-2">
+            <button class="form-control btn btn-outline-primary" onclick="send()">Send</button>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-      <a class="navbar-brand" href="#">Useless Website</a>
+      <a class="navbar-brand" href="index.html">Useless Website</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="chat.html">Chat</a>
+            <a class="nav-link" href="#">Chat</a>
           </li>
           <!--
           <li class="nav-item dropdown">
@@ -51,21 +59,47 @@
         </ul>
       </div>
     </nav>
+    
 
-    <div class="jumbotron" style="padding-left: 20%; padding-right: 20%; background-color: white;">
-      <h1 class="display-4" style="padding-top: 100px;;">Welcome to the most useless site on the web!</h1>
-      <p class="lead">You'll find that there isn't really much to do here, other than maybe look at some useless information, or chat with yourself, but really, there isn't anything at all useful to do here.</p>
-      <hr class="my-4">
-      <p>This right here is the most useful part of the website, a link to an actually useful website so you no longer have to deal with being on this website:</p>
-      <center>
-        <a class="btn btn-outline-primary" href="http://mlh.io" role="button">MLH Website</a>
-      </center>
-    </div>
-
+   
+    <section>
+      <div class="container" style="padding-top: 100px;">
+        <h1 class="centre">Chat</h1>
+        <p class="centre">Use this useless chat area to chat with yourself!<br><br>Not only will your messages not be saved after you leave, but you will not be able to read messages from anyone else!</p>
+        <center>
+            <button class="btn btn-outline-primary" onclick="pp()">Set Profile Picture</button>
+        </center>
+        <div id="chat-area">
+          
+        </div>
+      </div>
+    </section>
+    <p> </p>
+    <br><br><br>
     <script>
-      function run(){
-        alert("Unfortunately, signing up would be a useful feature to a website, and this website is made to be useless, so you won't be able to sign up for this website.");
-      }
+        function send(){
+            //alert("sent");
+            var mess=document.getElementById("message").value;
+            var chat=document.getElementById("chat-area");
+            //alert(mess);
+            var newDiv = document.createElement("div");
+            var newHeader = document.createElement("h4");
+            var newParagraph = document.createElement("p");
+            newDiv.style.cssText = "text-align: left;"
+            //newParagraph.style.cssText = "padding-left:20%; padding-right:20%; padding-bottom: 35px;"
+
+            newHeader.innerHTML = "From: You";
+            newParagraph.innerHTML = mess;
+            newDiv.appendChild(newHeader);
+            newDiv.appendChild(newParagraph);
+            chat.appendChild(newDiv);
+        }
+        function run(){
+            alert("Unfortunately, signing up would be a useful feature to a website, and this website is made to be useless, so you won't be able to sign up for this website.");
+        }
+        function pp(){
+            alert("Unfortunately, changing or setting a profile picture would be a useful feature to a website, and this website is meant to be useless, so you won't be able to change or set a profile picture on this website.");    
+        }
     </script>
     <script src="script.js"></script>
     <!--Scripts: DO NOT TOUCH!-->
