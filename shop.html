@@ -17,14 +17,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
   </head>
   <body>
-    <div class="row" style="position: fixed; bottom:25px; left:15%; right: 15%;">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="Message" id="message">
-        </div>
-        <div class="col-sm-2">
-            <button class="form-control btn btn-outline-primary" onclick="send()">Send</button>
-        </div>
-    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <a class="navbar-brand" href="index.html">Useless Website</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,74 +31,45 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Chat</a>
+            <a class="nav-link" href="chat.html">Chat</a>
           </li>
-          <!--
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          --> 
           <li>
             <button class="btn btn-outline-light" style="margin-left: 20px;"onclick="run()">Sign Up</button>
           </li>
         </ul>
       </div>
     </nav>
-    
-
-   
-    <section>
-      <div class="container" style="padding-top: 100px;">
-        <h1 class="centre thin">Chat</h1>
-        <p class="centre">Use this useless chat area to chat with yourself!<br><br>Not only will your messages not be saved after you leave, but you will not be able to read messages from anyone else!</p>
-        <center>
-            <button class="btn btn-outline-primary" onclick="pp()">Set Profile Picture</button>
-        </center>
-        <div id="chat-area">
-          
+    <div class="container" style="padding-top: 150px;">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h1 class="centre thin">Welcome to the Useless Shop!</h1>
+          <p class="centre">You'll find a narrow assortment of 0 items available for purchase, <br>(since if there were products on this page, it would be a useful shop).</p>
+          <br><br><br>
+          <h2 class="thin">Items for purchase:</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <input class = "form-control" type="text" placeholder="Search">
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-outline-primary" onclick="hello()">Submit</button>
+            </div>
+          </div>
         </div>
+        <div class="col-md-2"></div>
       </div>
-    </section>
-    <p> </p>
+    </div>
     <br><br><br>
     <script>
-        function send(){
-            //alert("sent");
-            var mess=document.getElementById("message").value;
-            var chat=document.getElementById("chat-area");
-            //alert(mess);
-            var newDiv = document.createElement("div");
-            var newHeader = document.createElement("h4");
-            var newParagraph = document.createElement("p");
-            var newSmall = document.createElement("small");
-            var timeStamp = new Date().toLocaleTimeString();
-            newDiv.style.cssText = "text-align: left;"
-            //newParagraph.style.cssText = "padding-left:20%; padding-right:20%; padding-bottom: 35px;"
+      function run(){
+        alert("Unfortunately, signing up would be a useful feature to a website, and this website is made to be useless, so you won't be able to sign up for this website.");
+      }
+      function hello(){
+        alert("We're sorry, but there were 0 items found from your search query. You can try another query, but we'll save you the time and tell you that you'll get the same message (there are 0 products on the whole store anyways)");
+      }
 
-            newHeader.innerHTML = "From: You";
-            newHeader.style.fontWeight = "lighter";
-            newParagraph.innerHTML = mess;
-            newSmall.innerHTML =  timeStamp;
-            console.log(timeStamp);
-            newDiv.appendChild(newHeader);
-            newDiv.appendChild(newSmall);
-            newDiv.appendChild(newParagraph);
-            chat.appendChild(newDiv);
-        }
-        function run(){
-            alert("Unfortunately, signing up would be a useful feature to a website, and this website is made to be useless, so you won't be able to sign up for this website.");
-        }
-        function pp(){
-            alert("Unfortunately, changing or setting a profile picture would be a useful feature to a website, and this website is meant to be useless, so you won't be able to change or set a profile picture on this website.");    
-        }
     </script>
+    
     <script src="script.js"></script>
     <!--Scripts: DO NOT TOUCH!-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

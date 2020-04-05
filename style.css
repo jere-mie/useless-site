@@ -10,3 +10,6 @@
     position: fixed;
     bottom:0;
 }
+.thin{
+    font-weight: lighter;
+}
