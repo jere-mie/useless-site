@@ -1,5 +1,5 @@
 # Useless-Site
-## A website designed to be completely useless
+## A website (and mobile app) designed to be completely useless
 ## CatHacks VI Digital Hackathon Submission
 http://www.auselessplace.online
 You can also download the APK for the Android app (created using Thunkable) within this repository (called 'A Useless App.apk')
