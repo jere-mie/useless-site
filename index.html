@@ -79,7 +79,7 @@
           <div class="card-body">
             <h5 class="card-title">Useless Chat</h5>
             <p class="card-text">Why go to a real chat application when we have a fully-featured application where you can chat with yourself (yes, that's right, you can only chat with yourself).</p>
-            <a href="chat.html" class="btn btn-primary">Chat App</a>
+            <p class="centre"><a href="chat.html" class="btn btn-primary">Chat App</a></p>
           </div>
         </div>
 
@@ -88,7 +88,7 @@
           <div class="card-body">
             <h5 class="card-title">Loading Screen</h5>
             <p class="card-text">Ever just wish you could experience the thrills of a loading screen without having to restart the process when the loading is finished? Look no further, as our page loads endlessly!.</p>
-            <a href="loading.html" class="btn btn-primary">Loading Forever</a>
+            <p class="centre"><a href="loading.html" class="btn btn-primary">Loading Forever</a></p>
           </div>
         </div>
 
@@ -97,7 +97,7 @@
           <div class="card-body">
             <h5 class="card-title">Useless Info</h5>
             <p class="card-text">Sometimes information doesn't have to be useful, relevant, or interesting. Sometimes information is just plain useless, and that's what we set out to provide for you!</p>
-            <a href="info.html" class="btn btn-primary">Useless Info</a>
+            <p class="centre"><a href="info.html" class="btn btn-primary">Useless Info</a></p>
           </div>
         </div>
 
@@ -106,7 +106,7 @@
           <div class="card-body">
             <h5 class="card-title">Support Page</h5>
             <p class="card-text">We all know that no one reads user's messages from support pages, so we took the liberty of creating a beautiful form for users to fill out, and the information gets deleted straight away!</p>
-            <a href="#support" class="btn btn-primary">Useless Support</a>
+            <p class="centre"><a href="#support" class="btn btn-primary">Useless Support</a></p>
           </div>
         </div>
 
@@ -115,14 +115,14 @@
           <div class="card-body">
             <h5 class="card-title">Empty Shop</h5>
             <p class="card-text">No good website is complete without some sort of ecommerce platform. This site is no exemption, and includes a full shopping page, but with 0 products (it wouldn't be useless unless there was nothing to buy).</p>
-            <a href="shop.html" class="btn btn-primary">Empty Shop</a>
+            <p class="centre"><a href="shop.html" class="btn btn-primary">Empty Shop</a></p>
           </div>
         </div>
 
         
       </div>
     </div>
-    <br><br><br><br><br><br><br>
+    <br><br><br id="support"><br><br><br><br>
     <div class="container">
       <div class="row">
         <div class="col-md-2"></div>
@@ -130,6 +130,31 @@
           <h1 class="centre thin">Support</h1>
           <p class="centre">Good news! Since we delete all data right as it is submitted, you don't have to worry about any security breaches!</p>
           <br><br><br>
+          <form>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label>First name</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label>Last name</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label>Email</label>
+                <div class="input-group">
+                  <input type="email" class="form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="vol-md-3 mb-3"></div>
+              <div class="col-md-12 mb-3">
+                <label>Issue</label>
+                <textarea class="form-control" rows="4"></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="enterform()">Submit form</button>
+          </form>
 
         </div>
       </div>
@@ -139,6 +164,9 @@
     <script>
       function run(){
         alert("Unfortunately, signing up would be a useful feature to a website, and this website is made to be useless, so you won't be able to sign up for this website.");
+      }
+      function enterform(){
+        alert("Sorry, but we do not collect support requests (that would be useful). Your data has not been saved.")
       }
     </script>
     <script src="script.js"></script>
