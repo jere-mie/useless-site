@@ -85,12 +85,17 @@
             var newDiv = document.createElement("div");
             var newHeader = document.createElement("h4");
             var newParagraph = document.createElement("p");
+            var newSmall = document.createElement("small");
+            var timeStamp = new Date().toLocaleTimeString();
             newDiv.style.cssText = "text-align: left;"
             //newParagraph.style.cssText = "padding-left:20%; padding-right:20%; padding-bottom: 35px;"
 
             newHeader.innerHTML = "From: You";
             newParagraph.innerHTML = mess;
+            newSmall.innerHTML =  timeStamp;
+            console.log(timeStamp);
             newDiv.appendChild(newHeader);
+            newDiv.appendChild(newSmall);
             newDiv.appendChild(newParagraph);
             chat.appendChild(newDiv);
         }
